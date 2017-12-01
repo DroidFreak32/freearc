@@ -4,7 +4,7 @@ ALL: $(TEMPDIR)/Environment.o $(TEMPDIR)/GuiEnvironment.o $(TEMPDIR)/URL.o $(TEM
 
 CODE_FLAGS = -fno-exceptions -fno-rtti -Wall \
                 -Wno-unknown-pragmas -Wno-sign-compare -Wno-conversion
-OPT_FLAGS   = -O3 -march=i486 -mtune=pentiumpro \
+OPT_FLAGS   = -O3 -march=x86-64 -mtune=generic \
               -fomit-frame-pointer -fstrict-aliasing \
               -ffast-math -fforce-addr
 DEBUG_FLAGS = -g0

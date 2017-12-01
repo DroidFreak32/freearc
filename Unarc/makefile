@@ -23,7 +23,7 @@ UNIX_LINK_FLAGS = -L$(LIBDIR) -lstdc++ -lrt -lpthread -s
 
 CODE_FLAGS  = -fno-exceptions -fno-rtti -Wall \
               -Wno-unknown-pragmas -Wno-sign-compare -Wno-conversion
-OPT_FLAGS   = -march=i486 -mtune=pentiumpro -ffast-math \
+OPT_FLAGS   = -march=x86-64 -mtune=generic -ffast-math \
               -fomit-frame-pointer -fstrict-aliasing \
               -fforce-addr
 DEBUG_FLAGS = -g0
