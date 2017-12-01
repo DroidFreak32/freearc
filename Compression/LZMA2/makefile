@@ -6,7 +6,7 @@ CODE_FLAGS = -fno-rtti -Wall \
                 -Wno-non-virtual-dtor -Wno-unknown-pragmas -Wno-sign-compare -Wno-conversion
 OPT_FLAGS   = -O2 -march=x86-64 -mtune=generic \
               -fomit-frame-pointer -fstrict-aliasing \
-              -ffast-math -fforce-addr -funroll-loops
+              -ffast-math -fforce-addr -funroll-loops -fpermissive
 DEBUG_FLAGS = -g0
 CFLAGS = $(CODE_FLAGS) $(OPT_FLAGS) $(DEBUG_FLAGS) $(DEFINES)
 

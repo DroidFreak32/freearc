@@ -2,7 +2,7 @@ include ../../common.mak
 
 ALL: $(TEMPDIR)/C_Tornado.o
 
-CODE_FLAGS  = -fno-exceptions -fno-rtti \
+CODE_FLAGS  = -fno-exceptions -fpermissive -fno-rtti \
               -Wno-unknown-pragmas -Wno-sign-compare -Wno-conversion
 OPT_FLAGS   = -O3 -march=x86-64 -mtune=generic \
               -fomit-frame-pointer -fstrict-aliasing \
