@@ -1,0 +1,25 @@
+# This shell script allows you to test novel FreeArc compression algorithms
+# on your data. Just run it in the root of directory containing large number
+# of files. Replace "/tmp" with the name of directory having enough free space
+# to archive whole source directory, and look at log files created to check
+# that they end with "All OK" line
+
+arc create /tmp/a -t -mlzp       -r      -i2 >/tmp/log+lzp
+arc create /tmp/a -t -mlzp:4:h13 -r      -i2 >/tmp/log+lzp-4
+arc create /tmp/a -t -mdelta     -r      -i2 >/tmp/log+delta
+arc create /tmp/a -t -mdict      -r      -i2 >/tmp/log+dict
+arc create /tmp/a -t -mdict:p    -r      -i2 >/tmp/log+dict-p
+arc create /tmp/a -t -mtor       -r      -i2 >/tmp/log+tor5
+arc create /tmp/a -t -mtor:3     -r      -i2 >/tmp/log+tor3
+arc create /tmp/a -t -mrep       -r      -i2 >/tmp/log+rep512
+arc create /tmp/a -t -mrep:32    -r      -i2 >/tmp/log+rep32
+
+arc create /tmp/a -t -mlzp       -r -s-  -i2 >/tmp/log-lzp
+arc create /tmp/a -t -mlzp:4:h13 -r -s-  -i2 >/tmp/log-lzp-4
+arc create /tmp/a -t -mdelta     -r -s-  -i2 >/tmp/log-delta
+arc create /tmp/a -t -mdict      -r -s-  -i2 >/tmp/log-dict
+arc create /tmp/a -t -mdict:p    -r -s-  -i2 >/tmp/log-dict-p
+arc create /tmp/a -t -mtor       -r -s-  -i2 >/tmp/log-tor5
+arc create /tmp/a -t -mtor:3     -r -s-  -i2 >/tmp/log-tor3
+arc create /tmp/a -t -mrep       -r -s-  -i2 >/tmp/log-rep512
+arc create /tmp/a -t -mrep:32    -r -s-  -i2 >/tmp/log-rep32
