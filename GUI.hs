@@ -8,7 +8,7 @@ import Prelude    hiding (catch)
 import Control.Monad
 import Control.Monad.Fix
 import Control.Concurrent
-import Control.OldException
+import Control.Exception
 import Data.Char  hiding (Control)
 import Data.IORef
 import Data.List

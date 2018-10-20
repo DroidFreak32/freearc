@@ -12,7 +12,7 @@ import HsCELS
 module CompressionLib where
 
 import Control.Concurrent
-import Control.OldException
+import Control.Exception
 import Control.Monad
 import Data.Bits
 import Data.Char
